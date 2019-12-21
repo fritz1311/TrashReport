@@ -1,0 +1,8 @@
+<h1>CONNEXION UTILISATEUR</h1>
+
+{%  if envoi %} vos donnees sont bien valides {% endif %}
+
+<form action="{% url "connect" %}" method="post">{% csrf_token %}
+    {{ form.as_table }}
+    <input type="submit" name="envoyer" value="valider" />
+</form>
